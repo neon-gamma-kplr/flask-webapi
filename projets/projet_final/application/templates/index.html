@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+</head>
+<body>
+    <h1>Liste de vos dépenses et recettes</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Type</th>
+            <th>Valeur</th>
+            <th>Date</th>
+        </tr>
+        {% for ligne in tableau %}
+            <tr>
+                <td>{{ ligne.id }}</td>
+                <td>{{ ligne.type }}</td>
+                <td>{{ ligne.value }}</td>
+                <td>{{ ligne.date }}</td>
+                <td>
+                    <button type="submit">Supprimer</button>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
